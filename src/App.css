@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #0f1b2d;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.sidebar-empty {
+  color: #555;
+  font-size: 0.85rem;
+  padding: 0 0.5rem;
+}
+
+.sidebar-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #16213e;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+
+.sidebar-card:hover {
+  background: #1a2a4a;
+}
+
+.sidebar-card.active {
+  border-color: #e94560;
+}
+
+.sidebar-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-city {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.sidebar-desc {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: capitalize;
+}
+
+.sidebar-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.sidebar-temp {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  color: #e94560;
+}
+
+/* MAIN PANEL */
+.main {
+  flex: 1;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  color: white;
+  font-family: sans-serif;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #16213e;
+  color: white;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background: #0f3460;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e94560;
+}
+
+.status {
+  color: #888;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #e94560;
+  margin-top: 1rem;
+}
+
+.weather-card {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.75rem;
+}
+
+.save-btn {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  background: #0f3460;
+  border-radius: 20px;
+}
+
+.save-btn:disabled {
+  background: #333;
+  color: #888;
+  cursor: default;
+}
+
+.save-btn:disabled:hover {
+  background: #333;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #0f3460;
+  padding-top: 1rem;
+}
+
+.detail p:first-child {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 0.25rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #16213e;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dropdown-item:hover {
+  background: #1a2a4a;
+}
+
+.dropdown-city {
+  font-size: 0.95rem;
+  color: white;
+}
+
+.dropdown-meta {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
